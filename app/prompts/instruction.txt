@@ -1,0 +1,38 @@
+Generate an Instagram Reel script based on the following specifications:
+
+BRAND PROFILE:
+{brand_profile}
+
+SCRIPT REQUIREMENTS:
+{script_request}
+
+REFERENCE EXAMPLES (HIGH-PERFORMING):
+{reference_examples}
+
+OUTPUT INSTRUCTIONS:
+Create a script that follows this exact JSON structure:
+{{
+  "hook": "Opening line that grabs attention in first 3 seconds",
+  "body": "Main content that delivers value and maintains engagement",
+  "cta": "Clear call-to-action that drives the desired response",
+  "caption": "Engaging Instagram caption (100-150 characters)",
+  "hashtags": ["hashtag1", "hashtag2", "hashtag3", "hashtag4", "hashtag5"]
+}}
+
+CRITICAL RULES:
+1. Hook must be under 15 words and match the specified hook_type
+2. Body must be conversational and fit within the script_length timing
+3. CTA must be direct and actionable
+4. DO NOT use any words from the brand's "do_not_use" list
+5. Maintain the specified brand_voice throughout
+6. Match the target emotion
+7. Output ONLY valid JSON, no additional text
+
+QUALITY CHECKLIST:
+✓ Hook creates immediate curiosity or relevance
+✓ Body provides value without fluff
+✓ CTA is specific and compelling
+✓ Caption complements the video
+✓ Hashtags are relevant to sector and goal
+✓ Brand safety guidelines followed
+✓ Target audience appropriately addressed
