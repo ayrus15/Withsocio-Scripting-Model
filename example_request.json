@@ -1,0 +1,37 @@
+{
+  "brand_profile": {
+    "brand_name": "FitLife Pro",
+    "sector": "fitness",
+    "target_audience": {
+      "age_range": "25-40",
+      "gender": "All",
+      "location": "USA",
+      "pain_points": [
+        "lack of motivation",
+        "time constraints",
+        "expensive gym memberships"
+      ]
+    },
+    "brand_voice": [
+      "energetic",
+      "motivational",
+      "authentic"
+    ],
+    "offer": "AI-powered home workout plans",
+    "platform": "instagram",
+    "cta_style": "direct",
+    "do_not_use": [
+      "lazy",
+      "fat",
+      "impossible"
+    ]
+  },
+  "script_request": {
+    "goal": "conversion",
+    "hook_type": "question",
+    "emotion": "curiosity",
+    "script_length": 30,
+    "language": "english",
+    "cta": "Download the app now!"
+  }
+}
