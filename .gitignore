@@ -48,8 +48,9 @@ yarn-error.log*
 logs/
 *.log
 
-# Testing
+# Testing - artifacts only (keep test files)
 .coverage
+coverage.xml
 htmlcov/
 .pytest_cache/
 .tox/
@@ -65,6 +66,9 @@ data/
 *.bin
 *.index
 
-# Test files
-test_*.py
-tests/
+# Test artifacts (but not test files themselves)
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+.tox/
