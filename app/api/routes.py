@@ -9,7 +9,6 @@ import logging
 from app.models.brand import BrandProfile
 from app.models.script_request import ScriptRequest
 from app.models.output import ReelScriptOutput
-from app.services.generator import ScriptGenerator
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -17,8 +16,17 @@ logger = logging.getLogger(__name__)
 # Create router
 router = APIRouter(prefix="/api", tags=["script-generation"])
 
-# Initialize generator (singleton pattern)
-generator = ScriptGenerator()
+# Generator will be initialized lazily on first request
+generator = None
+
+
+def get_generator():
+    """Lazy initialization of generator."""
+    global generator
+    if generator is None:
+        from app.services.generator import ScriptGenerator
+        generator = ScriptGenerator()
+    return generator
 
 
 @router.post(
@@ -52,7 +60,8 @@ async def generate_reel(
         logger.info(f"Received generation request for brand: {brand_profile.brand_name}")
         
         # Generate script with validation
-        script, validation = generator.regenerate_if_invalid(
+        gen = get_generator()
+        script, validation = gen.regenerate_if_invalid(
             brand_profile=brand_profile,
             script_request=script_request,
             max_attempts=2
